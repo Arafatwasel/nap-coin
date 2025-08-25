@@ -116,6 +116,21 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero .pec {
+    width: 100%;
+    height: 100vh;   /* نفس طول الشاشة */
+    object-fit: fill; /* تمط الصورة بالطول والعرض */
+    display: block;
+  }
+}
+
 /* 4- سامسونج جالاكسي S10/S20/S21 */
 @media only screen 
   and (min-device-width: 360px) 
