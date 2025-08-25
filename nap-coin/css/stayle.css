@@ -20,6 +20,10 @@
 }
 .nav-item-1{
     transform: translatey(-5px);
+    -webkit-transform: translatey(-5px);
+    -moz-transform: translatey(-5px);
+    -ms-transform: translatey(-5px);
+    -o-transform: translatey(-5px);
 }
 .nav-item-2{
     transform: translatey(-5px);
