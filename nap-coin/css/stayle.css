@@ -1,0 +1,124 @@
+/* -------- Navbar Icons -------- */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-nav .nav-item,
+.navbar-nav .nav-item1,
+.navbar-nav .nav-item2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-nav img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.nav-item-1{
+    transform: translatey(-5px);
+}
+.nav-item-2{
+    transform: translatey(-5px);
+
+}
+/* -------- Responsive -------- */
+/* -------- Navbar Icons -------- */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-nav .nav-item,
+.navbar-nav .nav-item-1,
+.navbar-nav .nav-item-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-nav img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.nav-item-1 {
+  transform: translateY(-5px);
+}
+
+.nav-item-2 {
+  transform: translateY(-5px);
+}
+
+/* -------- Hero -------- */
+.hero img {
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+/* -------- Responsive -------- */
+
+/* 1- معظم الموبايلات (iPhone, Samsung, Android) */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  #ca-number {
+    font-size: 12px;
+    word-break: break-all;
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .hero img {
+    height: auto;
+  }
+}
+
+/* 2- شاشات صغيرة جدًا (iPhone SE, Galaxy Mini) */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 12px;
+  }
+
+  #ca-number {
+    font-size: 10px;
+  }
+
+  .navbar-nav img,
+  .navbar-nav i {
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+  }
+}
+
+/* 3- آيفون حديث (iPhone X وما بعده) */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  
+  .hero img {
+    object-position: top;
+  }
+}
+
+/* 4- سامسونج جالاكسي S10/S20/S21 */
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 800px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  
+  .hero img {
+    object-position: center;
+  }
+}
