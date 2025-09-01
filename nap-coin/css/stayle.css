@@ -6,40 +6,6 @@
 }
 
 .navbar-nav .nav-item,
-.navbar-nav .nav-item1,
-.navbar-nav .nav-item2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar-nav img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-.nav-item-1{
-    transform: translatey(-5px);
-    -webkit-transform: translatey(-5px);
-    -moz-transform: translatey(-5px);
-    -ms-transform: translatey(-5px);
-    -o-transform: translatey(-5px);
-}
-.nav-item-2{
-    transform: translatey(-5px);
-
-}
-/* -------- Hero -------- */
-
-/* -------- Responsive -------- */
-/* -------- Navbar Icons -------- */
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.navbar-nav .nav-item,
 .navbar-nav .nav-item-1,
 .navbar-nav .nav-item-2 {
   display: flex;
@@ -62,9 +28,21 @@
 }
 
 /* -------- Hero -------- */
-.hero img {
-  max-height: 100vh;
+.hero {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #212529; /* لون النافبار */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .pec {
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
+  display: block;
 }
 
 /* -------- Responsive -------- */
@@ -83,22 +61,9 @@
   .navbar-nav {
     gap: 10px;
   }
-
+  
   .hero {
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* يحط الصورة في النص أفقياً */
-    align-items: center;     /* يحط الصورة في النص رأسياً */
-  }
-
-  .hero .pec {
-    height: 100vh;       /* الطول = طول الشاشة */
-    width: 20%;          /* العرض أصغر شوية */
-    object-fit: cover;   /* يحافظ على النسبة */
-    display: block;
-    overflow-x: scroll ;
+    padding-top: 60px; /* تعويض ارتفاع النافبار */
   }
 }
 
@@ -118,30 +83,48 @@
     height: 18px;
     font-size: 16px;
   }
-
+  
+  .hero {
+    padding-top: 60px; /* تعويض ارتفاع النافبار */
+    background-color: #212529; /* لون النافبار */
+  }
+  
   .hero .pec {
-    width: 85%;   /* العرض أصغر أكتر في الشاشات الصغيرة جداً */
+    width: 100%;
+    height: auto;
+    max-height: 70vh; /* تقليل ارتفاع الصورة */
+    object-fit: contain; /* عرض الصورة كاملة */
   }
 }
 
-/* 3- آيفون حديث (iPhone X وما بعده) */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-device-pixel-ratio: 3) {
-  
-  .hero img {
-    object-position: top;
+/* 3- شاشات كبيرة (لابتوب وأكبر) */
+@media (min-width: 769px) {
+  .hero {
+    padding-top: 0; /* إزالة البادنج في الشاشات الكبيرة */
   }
-}
-
-/* 4- سامسونج جالاكسي S10/S20/S21 */
-@media only screen 
-  and (min-device-width: 360px) 
-  and (max-device-width: 800px) 
-  and (-webkit-device-pixel-ratio: 3) {
   
-  .hero img {
-    object-position: center;
+  .hero .pec {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* تغطية المساحة بالكامل */
+  }
+  
+  /* إصلاح محاذاة النافبار في الشاشات الكبيرة */
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  #navbarIcons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 }
