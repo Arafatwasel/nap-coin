@@ -19,3 +19,8 @@ updateHeroImage();
 
 // عند تغيير حجم الشاشة
 window.addEventListener("resize", updateHeroImage);
+
+
+    const script = document.createElement("script");
+    script.src = "./nap-coin/js/main.js?v=" + new Date().getTime();
+    document.body.appendChild(script);
