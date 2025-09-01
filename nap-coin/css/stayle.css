@@ -84,8 +84,21 @@
     gap: 10px;
   }
 
-  .hero img {
-    height: auto;
+  .hero {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* يحط الصورة في النص أفقياً */
+    align-items: center;     /* يحط الصورة في النص رأسياً */
+  }
+
+  .hero .pec {
+    height: 100vh;       /* الطول = طول الشاشة */
+    width: 20%;          /* العرض أصغر شوية */
+    object-fit: cover;   /* يحافظ على النسبة */
+    display: block;
+    overflow-x: scroll ;
   }
 }
 
@@ -105,19 +118,11 @@
     height: 18px;
     font-size: 16px;
   }
-}
 
-@media (max-width: 768px) {
-  .hero {
-    height: 100vh;
-  }
-
-  .hero img.pec {
-    height: 100vh;
-    object-fit: cover;
+  .hero .pec {
+    width: 85%;   /* العرض أصغر أكتر في الشاشات الصغيرة جداً */
   }
 }
-
 
 /* 3- آيفون حديث (iPhone X وما بعده) */
 @media only screen 
@@ -127,21 +132,6 @@
   
   .hero img {
     object-position: top;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-  }
-
-  .hero .pec {
-    width: 100%;
-    height: 100vh;   /* نفس طول الشاشة */
-    object-fit: fill; /* تمط الصورة بالطول والعرض */
-    display: block;
   }
 }
 
