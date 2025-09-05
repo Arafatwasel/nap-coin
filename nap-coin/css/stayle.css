@@ -91,7 +91,7 @@ body {
   }
 
   #hero-img {
-    transform: translateY(60px);
+    transform: translateY(100px);
     margin-top: 10px;
     border-radius: 6px;
 }
