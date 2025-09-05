@@ -1,10 +1,11 @@
 body {
-  background-color: #4b4b4b !important; /* خلفية رمادي فاتح */
+  background-color: #4b4b4b; /* خلفية رمادي غامق */
   margin: 0;
   padding: 0;
+  font-family: "Cairo", sans-serif;
 }
 
-/* Navbar الأساسي */
+/* Navbar */
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -19,28 +20,30 @@ body {
 .navbar-nav {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 1px;
   align-items: center;
 }
 
 /* Hero Section */
 .hero {
-  padding-top: 120px; /* افتراضي للديسكتوب */
+  padding-top: 120px; /* مساحة كافية عشان الناف بار */
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 40px; /* ينزل الكلام بعيد عن الصورة */
+  text-align: center;
 }
 
 .hero h3 {
-  transform: translateY(-100px);
   font-size: 18px;
   line-height: 1.8;
   color: #ffffff;
+  margin-top: 20px; /* بدل الترانسفورم */
 }
 
-.img{
-    transform: translateY(-100px);
-
+.img {
+  margin-top: 20px; /* بدل الترانسفورم */
 }
+
 .hero-img-wrapper {
   margin-top: 40px;
   padding: 0 20px;
@@ -53,8 +56,10 @@ body {
   border-radius: 10px;
 }
 
-.footer{
+/* Footer */
+.footer {
   color: #ffffff;
+  padding: 20px 0;
 }
 
 /* 🔹 Media Query للموبايل */
@@ -64,18 +69,20 @@ body {
   }
 
   .navbar-nav {
-    gap: 10px;
+    gap: 2px;
   }
 
   .hero {
-    padding-top: 90px; /* يقلل المسافة عشان الموبايل */
+    padding-top: 90px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 20px;
   }
 
   .hero h3 {
     font-size: 14px;
     line-height: 1.6;
+    margin-top: 15px;
   }
 
   .hero-img-wrapper {
