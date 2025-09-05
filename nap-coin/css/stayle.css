@@ -82,7 +82,7 @@ body {
   .hero h3 {
     font-size: 14px;
     line-height: 1.6;
-    margin-top: 100px;
+    margin-top: 20px;
   }
 
   .hero-img-wrapper {
@@ -91,7 +91,7 @@ body {
   }
 
   #hero-img {
-    margin-top: 30px;
+    margin-top: 20px;
     border-radius: 6px;
   }
 }
